@@ -1,0 +1,6 @@
+[package]
+name = "lunokod"
+version = "0.1.0"
+authors = ["senet4er <senet4er@gmail.com>"]
+
+[dependencies]
