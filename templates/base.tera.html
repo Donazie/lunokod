@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>{% block title %}Безымянный{% endblock title %} - Лунокод</title>
+        <meta charset="utf-8"/>
+        {% block head %}{% endblock head %}
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/">Главная</a>
+                <a href="/users">Пользователи</a>
+                <a href="/players">Игроки</a>
+                <a href="/games">Игры</a>
+            </nav>
+            {% block header %}{% endblock header %}
+        </header>
+        <main>
+            {% block main %}
+            <span>Эта страница не заполнена</span>
+            {% endblock main %}
+        </main>
+        <footer>
+            <span>Лунокод, 2018</span>
+            {% block footer %}{% endblock footer %}
+        </footer>
+    </body>
+</html>
