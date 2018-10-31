@@ -2,6 +2,9 @@ extern crate failure;
 extern crate tera;
 extern crate warp;
 
+#[allow(dead_code)]
+mod facade;
+
 use warp::Filter;
 
 fn main() {
