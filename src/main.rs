@@ -2,29 +2,56 @@ extern crate failure;
 extern crate tera;
 extern crate warp;
 
-#[allow(dead_code)]
 mod facade;
 
+use failure::Fallible;
+use tera::Context;
 use warp::Filter;
 
-fn main() {
+use crate::facade::Tera;
+
+fn main() -> Fallible<()> {
     const BIND_ADDRESS: ([u8; 4], u16) = ([0, 0, 0, 0], 8080);
 
-    let home = warp::path::end().map(|| "Home page");
+    let tera = Tera::new()?;
+    let tera = warp::any().map(move || tera.clone());
+
+    let home = warp::path::end().and(tera.clone()).and_then(|tera: Tera| {
+        let context = Context::new();
+
+        tera.render("home.tera.html", &context)
+    });
 
     let users = warp::path("users")
         .and(warp::path::end())
-        .map(|| "Users page");
+        .and(tera.clone())
+        .and_then(|tera: Tera| {
+            let context = Context::new();
+
+            tera.render("users.tera.html", &context)
+        });
 
     let players = warp::path("players")
         .and(warp::path::end())
-        .map(|| "Players page");
+        .and(tera.clone())
+        .and_then(|tera: Tera| {
+            let context = Context::new();
+
+            tera.render("players.tera.html", &context)
+        });
 
     let games = warp::path("games")
         .and(warp::path::end())
-        .map(|| "Games page");
+        .and(tera.clone())
+        .and_then(|tera: Tera| {
+            let context = Context::new();
+
+            tera.render("games.tera.html", &context)
+        });
 
     let routes = warp::get2().and(home.or(users).or(players).or(games));
 
     warp::serve(routes).run(BIND_ADDRESS);
+
+    Ok(())
 }
