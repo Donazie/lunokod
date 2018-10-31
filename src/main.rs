@@ -33,13 +33,13 @@ fn main() -> Fallible<()> {
             tera.render("users.tera.html", &context)
         });
 
-    let players = warp::path("players")
+    let agents = warp::path("agents")
         .and(warp::path::end())
         .and(tera.clone())
         .and_then(|tera: Tera| {
             let context = Context::new();
 
-            tera.render("players.tera.html", &context)
+            tera.render("agents.tera.html", &context)
         });
 
     let games = warp::path("games")
@@ -54,7 +54,7 @@ fn main() -> Fallible<()> {
     let static_files = warp::fs::dir(STATIC_FILES_DIR);
 
     let routes =
-        warp::get2().and(home.or(users).or(players).or(games).or(static_files));
+        warp::get2().and(home.or(users).or(agents).or(games).or(static_files));
 
     warp::serve(routes).run(BIND_ADDRESS);
 
