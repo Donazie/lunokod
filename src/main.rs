@@ -1,3 +1,4 @@
+extern crate tera;
 extern crate warp;
 
 use warp::Filter;
