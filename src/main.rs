@@ -12,6 +12,8 @@ use crate::facade::Tera;
 
 fn main() -> Fallible<()> {
     const BIND_ADDRESS: ([u8; 4], u16) = ([0, 0, 0, 0], 8080);
+    const STATIC_FILES_DIR: &str =
+        concat!(env!("CARGO_MANIFEST_DIR"), "/static");
 
     let tera = Tera::new()?;
     let tera = warp::any().map(move || tera.clone());
@@ -49,7 +51,10 @@ fn main() -> Fallible<()> {
             tera.render("games.tera.html", &context)
         });
 
-    let routes = warp::get2().and(home.or(users).or(players).or(games));
+    let static_files = warp::fs::dir(STATIC_FILES_DIR);
+
+    let routes =
+        warp::get2().and(home.or(users).or(players).or(games).or(static_files));
 
     warp::serve(routes).run(BIND_ADDRESS);
 
