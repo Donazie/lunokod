@@ -1,3 +1,5 @@
+#[macro_use]
+extern crate diesel;
 extern crate failure;
 extern crate tera;
 extern crate warp;

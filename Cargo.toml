@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["senet4er <senet4er@gmail.com>"]
 
 [dependencies]
+diesel = { version = "1.3", features = ["sqlite"] }
 failure = "0.1"
 tera = "0.11"
 warp = "0.1"
