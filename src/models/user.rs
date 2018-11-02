@@ -6,7 +6,7 @@ pub struct User {
     username: String,
     useremail: String,
     userpassword: String,
-    useradmin: i32,
+    useradmin: bool,
     usercreated: NaiveDateTime,
     useractive: Option<NaiveDateTime>,
 }

@@ -31,7 +31,7 @@ table! {
         username -> Text,
         useremail -> Text,
         userpassword -> Text,
-        useradmin -> Integer,
+        useradmin -> Bool,
         usercreated -> Timestamp,
         useractive -> Nullable<Timestamp>,
     }
