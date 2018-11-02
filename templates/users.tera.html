@@ -1,6 +1,79 @@
 {% extends "base.tera.html" %}
 {% block title %}Пользователи{% endblock title %}
 {% block main %}
-<h1>Страница со списком пользователей</h1>
-<p>На этой странице отображается список пользователей.</p>
+<section class="list">
+    <article class="users-table-list">
+        Список пользователей
+    </article>
+</section>
+<section class="users-table">
+    <div class="users-table-head">
+        <div class="users-table-id">
+            <p>Id</p>
+        </div>
+        <div class="users-table-name">
+            <p>Name</p>
+        </div>
+        <div class="users-table-email">
+            <p>Email</p>
+        </div>
+        <div class="users-table-created">
+            <p>Register date</p>
+        </div>
+        <div class="users-table-active">
+            <p>Last active</p>
+        </div>
+    </div>
+    <div class="users-table-content">
+        <div class="users-table-content-id justifyCenter">
+            <p>1</p>
+        </div>
+        <div class="users-table-content-name">
+            <p>Игорь</p>
+        </div>
+        <div class="users-table-content-email">
+            <p>Ngorb@mail.ro</p>
+        </div>
+        <div class="users-table-content-created">
+            <p>09.09.2000</p>
+        </div>
+        <div class="users-table-content-active">
+            <p>19:30</p>
+        </div>
+    </div>
+    <div class="users-table-content">
+        <div class="users-table-content-id justifyCenter">
+            <p>1</p>
+        </div>
+        <div class="users-table-content-name">
+            <p>Игорь</p>
+        </div>
+        <div class="users-table-content-email">
+            <p>Ngorb@mail.ro</p>
+        </div>
+        <div class="users-table-content-created">
+            <p>09.09.2000</p>
+        </div>
+        <div class="users-table-content-active">
+            <p>19:30</p>
+        </div>
+    </div>
+    <div class="users-table-content">
+        <div class="users-table-content-id justifyCenter">
+            <p>1</p>
+        </div>
+        <div class="users-table-content-name">
+            <p>Игорь</p>
+        </div>
+        <div class="users-table-content-email">
+            <p>Ngorb@mail.ro</p>
+        </div>
+        <div class="users-table-content-created">
+            <p>09.09.2000</p>
+        </div>
+        <div class="users-table-content-active">
+            <p>19:30</p>
+        </div>
+    </div>
+</section>
 {% endblock main %}

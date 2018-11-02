@@ -2,10 +2,14 @@
 <html lang="ru">
     <head>
         <title>{% block title %}Безымянный{% endblock title %} - Лунокод</title>
+        <link rel="stylesheet" href="styles/base.css"/>
         <meta charset="utf-8"/>
         {% block head %}{% endblock head %}
     </head>
     <body>
+        <div class="logo">
+            <a href="/">LunoKod</a>
+        </div>
         <header>
             <nav>
                 <a href="/">Главная</a>
@@ -15,6 +19,12 @@
             </nav>
             {% block header %}{% endblock header %}
         </header>
+        <div class="button-register">
+            <a class="register" href="#">Регистрация</a>
+        </div>
+        <div class="button-login">
+            <a class="login" href="#">Вход</a>
+        </div>
         <main>
             {% block main %}
             <span>Эта страница не заполнена</span>

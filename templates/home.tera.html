@@ -1,11 +1,59 @@
 {% extends "base.tera.html" %}
 {% block title %}Главная{% endblock title %}
 {% block main %}
-<h1>Главная страница</h1>
-<p>На этой странице отображаются:</p>
-<ul>
-    <li>Последние зарегестрированные пользователи</li>
-    <li>Последние добавленные/измененные игроки</li>
-    <li>Последние проведенные игры</li>
-</ul>
+<section class="list">
+    <article class="users-list">
+        Новые пользователи
+    </article>
+</section>
+<section class="users-list-block">
+    <div class="block">
+        <div class="block-content">
+            <div class="block-img-text">
+                <div class="block-image">
+                </div>
+                <div class="block-text">
+                    <p>Артур</p>
+                    <p>jirn1aya@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="block-date">
+            11.09.2001
+        </div>
+    </div>
+</section>
+<section class="users-list-block">
+    <div class="block">
+        <div class="block-content">
+            <div class="block-img-text">
+                <div class="block-image">
+                </div>
+                <div class="block-text">
+                    <p>Егор</p>
+                    <p>jidtjsd@mail.ru</p>
+                </div>
+            </div>
+        </div>
+        <div class="block-date">
+            11.09.2011
+        </div>
+    </div>
+</section>
+<section class="list">
+    <article class="added-users-list">
+        Модифицированные агенты
+    </article>
+</section>
+<section class="added-users">
+    <section class="added-users-block">
+
+    </section>
+    <section class="added-users-block">
+
+    </section>
+    <section class="added-users-block">
+
+    </section>
+</section>
 {% endblock main %}
