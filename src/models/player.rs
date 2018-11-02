@@ -1,6 +1,6 @@
 #[derive(Queryable, Serialize)]
 pub struct Player {
-    playeragent: i32,
-    playergame: i32,
-    playerrank: i32,
+    agent: i32,
+    game: i32,
+    rank: i32,
 }

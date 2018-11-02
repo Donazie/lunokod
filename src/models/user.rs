@@ -2,11 +2,11 @@ use chrono::NaiveDateTime;
 
 #[derive(Queryable, Serialize)]
 pub struct User {
-    userid: i32,
-    username: String,
-    useremail: String,
-    userpassword: String,
-    useradmin: bool,
-    usercreated: NaiveDateTime,
-    useractive: Option<NaiveDateTime>,
+    id: i32,
+    name: String,
+    email: String,
+    password: String,
+    admin: bool,
+    created: NaiveDateTime,
+    active: Option<NaiveDateTime>,
 }
