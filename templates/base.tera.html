@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <title>{% block title %}Безымянный{% endblock title %} - Лунокод</title>
-        <link rel="stylesheet" href="styles/base.css"/>
+        <title>{% block title %}Нет имени{% endblock title %} - Лунокод</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans"/>
+        <link rel="stylesheet" href="style.css"/>
         <meta charset="utf-8"/>
-        {% block head %}{% endblock head %}
     </head>
     <body>
-        <div class="logo">
-            <a href="/">LunoKod</a>
-        </div>
         <header>
-            <nav>
-                <a href="/">Главная</a>
-                <a href="/users">Пользователи</a>
-                <a href="/agents">Агенты</a>
-                <a href="/games">Игры</a>
+            <a href="/">
+                <img class="logo" src="icons/logo.png" alt="LunoKod"/>
+            </a>
+            <nav class="routes">
+                <a class="routes-item" href="/users">Пользователи</a>
+                <a class="routes-item" href="/agents">Агенты</a>
+                <a class="routes-item" href="/games">Игры</a>
             </nav>
-            {% block header %}{% endblock header %}
+            <nav class="session">
+                <a class="session-item signin" href="/signin">Вход</a>
+                <a class="session-item signup" href="/signup">Регистрация</a>
+            </nav>
         </header>
-        <div class="button-register">
-            <a class="register" href="#">Регистрация</a>
-        </div>
-        <div class="button-login">
-            <a class="login" href="#">Вход</a>
-        </div>
         <main>
             {% block main %}
-            <span>Эта страница не заполнена</span>
+            <p>Пустая страница</p>
             {% endblock main %}
         </main>
         <footer>
-            <span>Лунокод, 2018</span>
-            {% block footer %}{% endblock footer %}
+            <p>Лунокод, 2018</p>
         </footer>
     </body>
 </html>

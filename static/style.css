@@ -1,0 +1,147 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0em;
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: "Fira Sans", sans-serif;
+    background-color: hsl(228, 30%, 16%);
+    color: hsl(224, 25%, 90%);
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    background-color: hsl(228, 30%, 20%);
+    box-shadow: 0em 0em 0.2em black;
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    margin: 0em 1em;
+    font: bold 1.25em "Fira Mono", monospace;
+}
+
+.routes {
+    flex-grow: 1;
+}
+
+.routes-item {
+    padding: 1em 2em;
+}
+
+.routes-item:hover {
+    background-color: hsl(228, 30%, 22%);
+}
+
+.session-item {
+    margin: 0.1em;
+    padding: 0.5em 1.0em;
+    border-radius: 0.5em;
+}
+
+.signin {
+    background-color: hsl(228, 30%, 45%);
+}
+
+.signup {
+    border: 0.1em solid hsl(228, 30%, 45%);
+}
+
+main {
+    width: 80%;
+    margin: 2em 0em;
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.username {
+    color: hsl(60, 100%, 40%);
+}
+
+.winner {
+    color: hsl(120, 100%, 40%);
+}
+
+.looser {
+    color: hsl(0, 100%, 40%);
+}
+
+.events-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+.users-block-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.avatar {
+    width: 5em;
+    padding: 1em;
+    border-radius: 50%;
+}
+
+.users-block-item .username {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2em;
+    border-bottom: 0.08em solid hsl(204, 64%, 44%);
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 0.08em solid hsl(204, 64%, 44%);
+}
+
+h3 {
+    font-size: 1.6em;
+    border-bottom: 0.08em solid hsl(204, 64%, 44%);
+}
+
+table {
+    width: 100%;
+    border-spacing: 0em;
+}
+
+table th, td {
+    margin: 0em;
+    padding: 1em 2em;
+}
+
+table th {
+    background-color: hsl(228, 30%, 12%);
+}
+
+table tr {
+    background-color: hsl(228, 30%, 14%);
+}
+
+table tr:hover {
+    background-color: hsl(228, 30%, 18%);
+}
+
+footer {
+    padding: 1em 0em;
+    text-align: center;
+    background-color: hsl(228, 30%, 10%);
+    box-shadow: 0em 0em 0.2em black;
+}

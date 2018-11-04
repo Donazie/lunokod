@@ -1,59 +1,57 @@
 {% extends "base.tera.html" %}
 {% block title %}Главная{% endblock title %}
 {% block main %}
-<section class="list">
-    <article class="users-list">
-        Новые пользователи
-    </article>
-</section>
-<section class="users-list-block">
-    <div class="block">
-        <div class="block-content">
-            <div class="block-img-text">
-                <div class="block-image">
+<article>
+    <section class="events-block">
+        <article>
+            <h2>Новые пользователи</h2>
+            <section class="users-block">
+                <div class="users-block-item">
+                    <img class="avatar" src="images/avatar.png"/>
+                    <span class="username">Игорь</span>
+                    <time>11.09.2018 12:00:01</time>
                 </div>
-                <div class="block-text">
-                    <p>Артур</p>
-                    <p>jirn1aya@gmail.com</p>
+                <div class="users-block-item">
+                    <img class="avatar" src="images/avatar.png"/>
+                    <span class="username">Игорь</span>
+                    <time>11.09.2018 12:00:01</time>
                 </div>
-            </div>
-        </div>
-        <div class="block-date">
-            11.09.2001
-        </div>
-    </div>
-</section>
-<section class="users-list-block">
-    <div class="block">
-        <div class="block-content">
-            <div class="block-img-text">
-                <div class="block-image">
+                <div class="users-block-item">
+                    <img class="avatar" src="images/avatar.png"/>
+                    <span class="username">Игорь</span>
+                    <time>11.09.2018 12:00:01</time>
                 </div>
-                <div class="block-text">
-                    <p>Егор</p>
-                    <p>jidtjsd@mail.ru</p>
+            </section>
+        </article>
+        <article>
+            <h2>Прошедшие игры</h2>
+            <section class="games-block">
+                <div class="games-block-item">
+                    <span class="players">
+                        <span class="username looser">Игорь</span>
+                        <span class="vs"> vs </span>
+                        <span class="username winner">Игорь</span>
+                    </span>
+                    <time>11.09.2018 12:00:01</time>
                 </div>
-            </div>
-        </div>
-        <div class="block-date">
-            11.09.2011
-        </div>
-    </div>
-</section>
-<section class="list">
-    <article class="added-users-list">
-        Модифицированные агенты
-    </article>
-</section>
-<section class="added-users">
-    <section class="added-users-block">
-
+                <div class="games-block-item">
+                    <span class="players">
+                        <span class="username looser">Игорь</span>
+                        <span class="vs"> vs </span>
+                        <span class="username winner">Игорь</span>
+                    </span>
+                    <time>11.09.2018 12:00:01</time>
+                </div>
+                <div class="games-block-item">
+                    <span class="players">
+                        <span class="username looser">Игорь</span>
+                        <span class="vs"> vs </span>
+                        <span class="username winner">Игорь</span>
+                    </span>
+                    <time>11.09.2018 12:00:01</time>
+                </div>
+            </section>
+        </article>
     </section>
-    <section class="added-users-block">
-
-    </section>
-    <section class="added-users-block">
-
-    </section>
-</section>
+</article>
 {% endblock main %}
