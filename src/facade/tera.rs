@@ -14,7 +14,7 @@ impl Tera {
     #[must_use]
     pub fn new() -> Result<Self, SyncFailure<Error>> {
         const TEMPLATES_PATH: &str =
-            concat!(env!("CARGO_MANIFEST_DIR"), "/templates/**/*");
+            concat!(env!("CARGO_MANIFEST_DIR"), "/static/templates/**/*");
 
         TeraInner::new(TEMPLATES_PATH)
             .map(Self::from)
